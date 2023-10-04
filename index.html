@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Blog Platform</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        textbrown: '#3c2810',
+                        brown: '#201208',
+                        lightbrown: '#774f22',
+                        beige: '#BDAC9C',
+                        cream: '#EBDDCF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+    </style>
+</head>
+
+<body class="bg-beige">
+    <div class="md:container md:mx-auto">
+        <!--Header-->
+        <div class="h-96 rounded-b-3xl px-12 pt-3 bg-cover bg-center header-reveal"
+            style="background-image: url('./assets/camille-brodard-1.jpg');">
+            <header>
+                <nav
+                    class="bg-white px-4 lg:px-6 py-2.5 rounded-xl backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100 nav-reveal">
+                    <div class="flex flex-wrap justify-between items-center w-full">
+                        <a href="/index.html" class="flex items-center">
+                            <span class="self-center text-3xl text-brown font-semibold whitespace-nowrap"><i
+                                    class="fa-brands fa-blogger-b"></i></span>
+                        </a>
+                        <div class="flex items-center lg:order-2">
+                            <div class="flex rounded-full border-2 border-r-0 border-brown overflow-hidden">
+                                <a href="#" class="font-medium p-2 px-4 text-base text-brown">Log
+                                    In</a>
+                                <a href="#" class="font-light p-2 px-4 bg-brown rounded-l-full text-white">Sign
+                                    Up</a>
+                            </div>
+
+                            <button data-collapse-toggle="mobile-menu-2" type="button"
+                                class="inline-flex items-center p-2 ml-1 text-lg text-gray-500 rounded-lg lg:hidden"
+                                aria-controls="mobile-menu-2" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <div class="text-3xl text-brown">
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                            id="mobile-menu-2">
+                            <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                                <li>
+                                    <a href="/index.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:text-primary-700 lg:p-0">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/profile.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">About</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/profile.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Property</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/blog-page.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <div
+            class="h-16 my-8 pl-4 rounded-xl text-brown flex items-center w-full border-2 border-brown hover:border-lightbrown transition-colors duration-200 search-reveal">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="ml-2 h-full w-full bg-transparent border-0 text-xl placeholder-brown focus:ring-0"
+                placeholder="Search Articles">
+        </div>
+
+        <div class="flex justify-between my-4 text-4xl">
+            <p class="pl-1 featured-articles" style="font-family: 'Cormorant Garamond', serif;">Featured Articles</p>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="featured-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square md:col-span-2 lg:col-span-1 flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                style="background-image: url('./assets/camille-brodard-2.jpg');">
+                <div class="w-full rounded-2xl md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                    <div
+                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                        Python
+                    </div>
+                    <div
+                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                        Programing
+                    </div>
+                </div>
+                <a href="/pages/blog-page.html" class="bg-cream w-full rounded-2xl md:h-1/2 p-3 h-2/3">
+                    <p class="text-xs mb-2">Ball Panuwat · Oct 1</p>
+                    <div>
+                        <p class="text-lg font-bold">20 Python Concepts I Wish I Knew Way Earlier 🐍</p>
+                        <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et est, doloremque
+                            molestias ea voluptates animi...</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="featured-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square md:col-span-2 lg:col-span-1 flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                style="background-image: url('./assets/camille-brodard-3.jpg');">
+                <div class="w-full rounded-2xl md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                    <div
+                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                        Data Science
+                    </div>
+                    <div
+                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                        Python
+                    </div>
+                </div>
+                <a href="/pages/blog-page.html" class="bg-cream w-full rounded-2xl md:h-1/2 p-3 h-2/3">
+                    <p class="text-xs mb-2">Ball Panuwat · Sep 25</p>
+                    <div>
+                        <p class="text-lg font-bold">Stable Diffusion: How AI Converts Text to Images 🧠</p>
+                        <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt
+                            consectetur expedita voluptate optio neque...</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="featured-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square md:col-span-2 lg:col-span-1 flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                style="background-image: url('./assets/camille-brodard-4.jpg');">
+                <div class="w-full rounded-2xl md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                    <div
+                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                        React
+                    </div>
+                    <div
+                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                        JavaScript
+                    </div>
+                </div>
+                <a href="/pages/blog-page.html" class="bg-cream w-full rounded-2xl md:h-1/2 p-3 h-2/3">
+                    <p class="text-xs mb-2">Ball Panuwat · Sep 22</p>
+                    <div>
+                        <p class="text-lg font-bold">Stop using too many useState() in React ⚛</p>
+                        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident,
+                            recusandae possimus impedit commodi accusantium...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid xl:grid-cols-3 grid-cols-2 gap-4 my-4">
+            <div class="w-full col-span-2">
+                <div class="grid gap-4">
+                    <div class="pl-1 py-4 rounded-3xl text-4xl lastest-article" style="font-family: 'Cormorant Garamond', serif;">Lastest Article</div>
+                    <div class="overflow-hidden rounded-3xl p-4 text-4xl h-72 lg:h-96 bg-cover bg-center lastest-article-item"
+                        style="background-image: url('./assets/camille-brodard-5.jpg');">
+                        <div
+                            class="border-2 border-white rounded-3xl w-full h-full flex flex-col md:justify-between lg:flex-row items-end overflow-hidden">
+
+                            <div class="rounded-2xl w-full lg:w-1/3 md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                                <div
+                                    class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                    Machine Learning
+                                </div>
+                                <div
+                                    class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                    Python
+                                </div>
+                            </div>
+
+                            <a href="/pages/blog-page.html"
+                                class="bg-cream lg:h-full w-full lg:w-2/6 h-2/3 md:rounded-l-3xl rounded-t-3xl p-4 lg:hover:scale-105 transition-transform duration-200">
+                                <p class="text-xs mb-2">Ball Panuwat · Oct 4</p>
+                                <p class="text-lg font-bold lg:text-3xl lg:mb-3">How to become very good at Machine
+                                    Learning 🤖
+                                </p>
+                                <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                    atque placeat consequuntur eius accusamus unde...
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="pl-1 py-4 rounded-3xl text-4xl all-articles" style="font-family: 'Cormorant Garamond', serif;">All Articles</div>
+
+                    <div>
+                        <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-4">
+                            <div class="all-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                                style="background-image: url('./assets/camille-brodard-5.jpg');">
+
+                                <div class="rounded-2xl w-full md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Machine Learning
+                                    </div>
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Python
+                                    </div>
+                                </div>
+
+                                <a href="/pages/blog-page.html" class="bg-cream w-full h-2/3 md:h-1/2 p-4 rounded-2xl">
+                                    <p class="text-xs mb-2 xl:mb-1">Ball Panuwat · Oct 4</p>
+                                    <p class="xl:text-base text-lg font-bold">How to become very good at Machine
+                                        Learning 🤖
+                                    </p>
+                                    <p class="xl:text-xs text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Officiis
+                                        atque placeat consequuntur eius accusamus unde...
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="all-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                                style="background-image: url('./assets/camille-brodard-2.jpg');">
+
+                                <div class="w-full rounded-2xl md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Python
+                                    </div>
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Programing
+                                    </div>
+                                </div>
+                                <a href="/pages/blog-page.html" class="bg-cream w-full h-2/3 md:h-1/2 p-4 rounded-2xl">
+                                    <p class="text-xs mb-2 xl:mb-1">Ball Panuwat · Oct 1</p>
+                                    <p class="xl:text-base text-lg font-bold">20 Python Concepts I Wish I Knew Way
+                                        Earlier 🐍</p>
+                                    <p class="xl:text-xs text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                        elit. Et
+                                        est, doloremque
+                                        molestias ea voluptates animi...
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="all-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                                style="background-image: url('./assets/camille-brodard-3.jpg');">
+
+                                <div class="rounded-2xl w-full md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Data Science
+                                    </div>
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Python
+                                    </div>
+                                </div>
+
+                                <a href="/pages/blog-page.html" class="bg-cream w-full h-2/3 md:h-1/2 p-4 rounded-2xl">
+                                    <p class="text-xs mb-2 xl:mb-1">Ball Panuwat · Sep 25</p>
+                                    <p class="xl:text-base text-lg font-bold">Stable Diffusion: How AI Converts Text to
+                                        Images 🧠
+                                    </p>
+                                    <p class="xl:text-xs text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                        elit. Vel deserunt consectetur expedita voluptate optio neque...
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="all-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                                style="background-image: url('./assets/camille-brodard-4.jpg');">
+
+                                <div class="rounded-2xl w-full md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        React
+                                    </div>
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        JavaScript
+                                    </div>
+                                </div>
+
+                                <a href="/pages/blog-page.html" class="bg-cream w-full h-2/3 md:h-1/2 p-4 rounded-2xl">
+                                    <p class="text-xs mb-2 xl:mb-1">Ball Panuwat · Sep 22</p>
+                                    <p class="xl:text-base text-lg font-bold">Stop using too many useState() in React ⚛
+                                    </p>
+                                    <p class="xl:text-xs text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Animi provident, recusandae possimus impedit commodi accusantium...
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="all-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                                style="background-image: url('./assets/camille-brodard-6.jpg');">
+
+                                <div class="rounded-2xl w-full md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Docker
+                                    </div>
+                                </div>
+
+                                <a href="/pages/blog-page.html" class="bg-cream w-full h-2/3 md:h-1/2 p-4 rounded-2xl">
+                                    <p class="text-xs mb-2 xl:mb-1">Ball Panuwat · Sep 17</p>
+                                    <p class="xl:text-base text-lg font-bold">10 Secrets to Improve Your Dockerfile 🐳
+                                    </p>
+                                    <p class="xl:text-xs text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Incidunt labore maiores odit molestiae eum voluptatem...
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="all-article w-full h-72 lg:h-80 rounded-3xl p-2 aspect-square flex flex-col bg-cover bg-center lg:hover:scale-105 transition-transform duration-200"
+                                style="background-image: url('./assets/camille-brodard-8.jpg');">
+
+                                <div class="rounded-2xl w-full md:h-1/2 p-2 h-2/3 flex items-end gap-2">
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        Design
+                                    </div>
+                                    <div
+                                        class="px-3 py-1 text-sm rounded-xl backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100 text-white">
+                                        UX/UI
+                                    </div>
+                                </div>
+
+                                <a href="/pages/blog-page.html" class="bg-cream w-full h-2/3 md:h-1/2 p-4 rounded-2xl">
+                                    <p class="text-xs mb-2 xl:mb-1">Ball Panuwat · Sep 12</p>
+                                    <p class="xl:text-base text-lg font-bold">Clean UI Guide: 15 White Space Design Tips
+                                        🎨
+                                    </p>
+                                    <p class="xl:text-xs text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Consequatur dolor, omnis aliquam autem quo architecto...
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full col-span-2 xl:col-span-1">
+                <div class="grid gap-4">
+                    <div class="pl-1 py-4 rounded-3xl text-4xl about-reveal" style="font-family: 'Cormorant Garamond', serif;">About</div>
+
+                    <div class="p-4 bg-red-200 rounded-3xl text-4xl h-72 lg:h-96 bg-cover bg-center profile-reveal"
+                        style="background-image: url('./assets/jeremy-budiman.jpg');">
+                        <div class="w-full h-full rounded-3xl border-2 border-white flex justify-center items-end">
+                            <div class="text-center p-4">
+                                <p class="text-2xl text-textbrown font-bold"><a href="/pages/profile.html" class="underline">Ball
+                                        Panuwat</a></p>
+                                <p class="text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis,
+                                    tempore!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pl-1 py-4 rounded-3xl text-4xl categories-reveal" style="font-family: 'Cormorant Garamond', serif;">Top Categories</div>
+
+                    <div class="h-72 lg:h-80 text-3xl grid gap-4">
+                        <div class="w-full rounded-3xl p-6 bg-cover bg-center category-reveal"
+                            style="background-image: url('./assets/camille-brodard-9.jpg');">
+                            <div
+                                class="w-full h-full border-2 border-white rounded-xl flex justify-center items-center">
+                                <button
+                                    class="p-2 bg-white text-textbrown text-base tracking-wider font-bold w-1/2 rounded-xl hover:bg-zinc-100">
+                                    PYTHON
+                                </button>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-3xl p-6 bg-cover bg-center category-reveal"
+                            style="background-image: url('./assets/camille-brodard-10.jpg');">
+                            <div
+                                class="w-full h-full border-2 border-white rounded-xl flex justify-center items-center">
+                                <button
+                                    class="p-2 bg-white text-textbrown text-base tracking-wider font-bold w-1/2 rounded-xl hover:bg-zinc-100">
+                                    REACT
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-72 lg:h-80 text-3xl grid gap-4">
+                        <div class="w-full rounded-3xl p-6 bg-cover bg-center category-reveal"
+                            style="background-image: url('./assets/camille-brodard-12.jpg');">
+                            <div
+                                class="w-full h-full border-2 border-white rounded-xl flex justify-center items-center">
+                                <button
+                                    class="p-2 bg-white text-textbrown text-base tracking-wider font-bold w-1/2 rounded-xl hover:bg-zinc-100">
+                                    JAVASCRIPT
+                                </button>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-3xl p-6 bg-cover bg-center category-reveal"
+                            style="background-image: url('./assets/camille-brodard-13.jpg');">
+                            <div
+                                class="w-full h-full border-2 border-white rounded-xl flex justify-center items-center">
+                                <button
+                                    class="p-2 bg-white text-textbrown text-base tracking-wider font-bold w-1/2 rounded-xl hover:bg-zinc-100">
+                                    DOCKER
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-20 rounded-t-3xl mt-8 px-12 pt-3 bg-cover bg-center"
+            style="background-image: url('./assets/camille-brodard-16.jpg');">
+            <div
+                class="px-4 rounded-xl h-12 flex items-center justify-center backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100">
+                <div class="flex gap-4 md:gap-8 lg:gap-16">
+                    <p>Created by <a href="https://github.com/ballpanuwat25"
+                            class="text-white underline font-bold">ballpanuwat25</a> 🌸 </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

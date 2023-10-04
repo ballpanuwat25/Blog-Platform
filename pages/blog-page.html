@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Blog Platform</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        textbrown: '#3c2810',
+                        brown: '#201208',
+                        lightbrown: '#774f22',
+                        beige: '#BDAC9C',
+                        cream: '#EBDDCF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+    </style>
+</head>
+
+<body class="bg-beige">
+    <div class=" md:container md:mx-auto">
+        <!-- Header -->
+        <div class=" h-40 rounded-b-3xl px-12 pt-3 bg-cover bg-center header-reveal"
+            style="background-image: url('../assets/camille-brodard-1.jpg');">
+            <header>
+                <nav
+                    class="bg-white px-4 lg:px-6 py-2.5 rounded-xl backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100 nav-reveal">
+                    <div class="flex flex-wrap justify-between items-center w-full">
+                        <a href="/index.html" class="flex items-center">
+                            <span class="self-center text-3xl text-brown font-semibold whitespace-nowrap"><i
+                                    class="fa-brands fa-blogger-b"></i></span>
+                        </a>
+                        <div class="flex items-center lg:order-2">
+                            <a href="/pages/create-blog-page.html"
+                                class="font-light p-2 bg-brown rounded-lg border-2 border-brown text-white hover:bg-textbrown">
+                                <i class="fa-regular fa-pen-to-square mr-2"></i>
+                                Write
+                            </a>
+
+                            <button data-collapse-toggle="mobile-menu-2" type="button"
+                                class="inline-flex items-center p-2 ml-1 text-lg text-gray-500 rounded-lg lg:hidden"
+                                aria-controls="mobile-menu-2" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <div class="text-3xl text-brown">
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                            id="mobile-menu-2">
+                            <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                                <li>
+                                    <a href="/index.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:text-primary-700 lg:p-0">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/profile.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">About</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/profile.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Property</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/blog-page.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <main class="container mx-auto mt-8 px-4 w-full lg:w-1/2">
+            <article class="prose max-w-2xl mx-auto">
+                <div class="mb-4">
+                    <h1 class="text-4xl text-brown font-bold mb-4">Blog Platform Page Title ✨</h1>
+                    <p class="text-textbrown">Published on October 2, 2023 by <a href="/pages/profile.html"
+                            class="underline">Ball Panuwat</a></p>
+                </div>
+
+                <div class="flex flex-row items-end aspect-video rounded-xl mb-4 bg-cover bg-center"
+                    style="background-image: url('../assets/camille-brodard-17.jpg');">
+                </div>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo tortor quis neque malesuada,
+                    sed
+                    lacinia nisi vestibulum. Nulla facilisi. Aliquam ac dapibus odio. Sed gravida massa nec libero
+                    facilisis, eget fermentum justo pharetra. Ut efficitur, dolor vel tincidunt malesuada, turpis arcu
+                    ullamcorper purus, eget cursus elit erat a felis. Donec vel justo a nisl hendrerit laoreet eget sed
+                    dui.
+                    Vivamus mattis libero quis quam luctus, eu ullamcorper ante dignissim. Nunc eget condimentum libero.
+                    Praesent vulputate fringilla arcu, a facilisis tortor facilisis a. Nullam hendrerit turpis id dui
+                    tincidunt, vel volutpat ligula hendrerit.</p>
+
+                <p>Vivamus eget ligula at arcu facilisis dignissim. Fusce efficitur, libero a feugiat sodales, augue
+                    massa
+                    lacinia quam, quis feugiat ante odio nec eros. Sed dignissim arcu ut neque condimentum vehicula.
+                    Maecenas in convallis odio. Aenean malesuada, leo sit amet iaculis commodo, nulla ligula bibendum
+                    dolor,
+                    nec tristique tortor lectus nec nisi. Sed sed tellus vel elit congue malesuada.</p>
+
+                <blockquote>
+                    <p>"In hac habitasse platea dictumst. Suspendisse cursus, urna sed consectetur hendrerit, odio elit
+                        scelerisque neque."</p>
+                    <cite>— Lorem Ipsum</cite>
+                </blockquote>
+
+                <p>Phasellus at velit sed urna mattis vehicula. Integer vitae justo ac metus auctor facilisis nec id
+                    nulla.
+                    Aenean id odio id dui pharetra sodales nec non lorem. Curabitur ut feugiat ex. Duis vel efficitur
+                    libero. Quisque sed ex eu risus malesuada pellentesque. Fusce in elit quis arcu cursus tempus. Etiam
+                    ut
+                    vehicula arcu. Integer vitae odio ac justo efficitur lacinia ut ac leo.</p>
+            </article>
+        </main>
+
+        <section class="container mx-auto mt-8 px-4 w-full lg:w-1/2">
+            <h2 class="text-2xl font-semibold mb-4 blog-article">Comments</h2>
+
+            <div class="bg-cream rounded-lg p-4 shadow-md mb-4 blog-article">
+                <div class="comment">
+                    <h4 class="text-textbrown text-2xl font-semibold">User 1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo tortor quis neque
+                        malesuada, sed lacinia nisi vestibulum.</p>
+                </div>
+            </div>
+
+            <div class="bg-cream rounded-lg p-4 shadow-md mb-4 blog-article">
+                <div class="comment">
+                    <h4 class="text-textbrown text-2xl font-semibold">User 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo tortor quis neque
+                        malesuada, sed lacinia nisi vestibulum.</p>
+                </div>
+            </div>
+
+            <!-- Add your comment form here -->
+            <div class="bg-cream rounded-lg p-4 shadow-md mb-4 blog-article">
+                <h3 class="text-xl font-semibold mb-2">Add your comment</h3>
+                <form action="#" method="post">
+                    <div class="mb-4">
+                        <label for="name" class="block text-textbrown">Name:</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full border rounded-lg py-2 px-3 bg-transparent border-2 border-brown focus:ring-0 focus:border-lightbrown"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="comment" class="block text-textbrown">Comment:</label>
+                        <textarea id="comment" name="comment"
+                            class="w-full border rounded-lg py-2 px-3 bg-transparent border-2 border-brown focus:ring-0 focus:border-lightbrown"
+                            rows="4" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="font-light w-full p-2 bg-brown rounded-lg border-2 border-brown text-white hover:bg-textbrown">Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <div class="h-20 rounded-t-3xl mt-8 px-12 pt-3 bg-cover bg-center"
+            style="background-image: url('../assets/camille-brodard-16.jpg');">
+            <div
+                class="px-4 rounded-xl h-12 flex items-center justify-center backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100">
+                <div class="flex gap-4 md:gap-8 lg:gap-16">
+                    <p>Created by <a href="https://github.com/ballpanuwat25"
+                            class="text-white underline font-bold">ballpanuwat25</a> 🌸 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>

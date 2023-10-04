@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Blog Platform</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        textbrown: '#3c2810',
+                        brown: '#201208',
+                        lightbrown: '#774f22',
+                        beige: '#BDAC9C',
+                        cream: '#EBDDCF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+    </style>
+</head>
+
+<body class="bg-beige min-h-screen flex flex-col">
+    <div class="md:container md:mx-auto flex-grow">
+        <!-- Header -->
+        <div class=" h-40 rounded-b-3xl px-12 pt-3 bg-cover bg-center header-reveal"
+            style="background-image: url('../assets/camille-brodard-1.jpg');">
+            <header>
+                <nav
+                    class="bg-white px-4 lg:px-6 py-2.5 rounded-xl backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100 nav-reveal">
+                    <div class="flex flex-wrap justify-between items-center w-full">
+                        <a href="/index.html" class="flex items-center">
+                            <span class="self-center text-3xl text-brown font-semibold whitespace-nowrap"><i
+                                    class="fa-brands fa-blogger-b"></i></span>
+                        </a>
+                        <div class="flex items-center lg:order-2">
+                            <a href="/pages/create-blog-page.html"
+                                class="font-light p-2 bg-brown rounded-lg border-2 border-brown text-white hover:bg-textbrown">
+                                <i class="fa-regular fa-pen-to-square mr-2"></i>
+                                Write
+                            </a>
+
+                            <button data-collapse-toggle="mobile-menu-2" type="button"
+                                class="inline-flex items-center p-2 ml-1 text-lg text-gray-500 rounded-lg lg:hidden"
+                                aria-controls="mobile-menu-2" aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <div class="text-3xl text-brown">
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                            id="mobile-menu-2">
+                            <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                                <li>
+                                    <a href="/index.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 rounded lg:bg-transparent lg:text-primary-700 lg:p-0">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/profile.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">About</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/profile.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Property</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/blog-page.html"
+                                        class="text-lg text-brown block py-2 pr-4 pl-3 lg:p-0">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+        <!-- Main Content -->
+        <main class="container mx-auto mt-8 px-4 w-full lg:w-1/2">
+            <div class="prose max-w-2xl mx-auto">
+                <h1 class="text-3xl font-semibold mb-4">Create your blog.</h1>
+
+                <form action="#" method="post" class="max-w-2xl mx-auto">
+                    <div class="mb-4">
+                        <label for="title" class="block text-brown text-xl mb-2">Title:</label>
+                        <input type="text" id="title" name="title"
+                            class="bg-transparent w-full border-2 border-brown rounded-lg py-2 px-3 focus:ring-0 focus:border-lightbrown"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="image" class="block text-brown text-xl mb-2">Image URL:</label>
+                        <input type="url" id="image" name="image"
+                            class="bg-transparent w-full border-2 border-brown rounded-lg py-2 px-3 focus:ring-0 focus:border-lightbrown"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="tags" class="block text-brown text-xl mb-2">Tags (comma-separated):</label>
+                        <input type="text" id="tags" name="tags"
+                            class="bg-transparent w-full border-2 border-brown rounded-lg py-2 px-3 focus:ring-0 focus:border-lightbrown"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="content" class="block text-brown text-xl mb-2">Content:</label>
+                        <textarea id="content" name="content"
+                            class="bg-transparent w-full border-2 border-brown rounded-lg py-2 px-3 focus:ring-0 focus:border-lightbrown"
+                            rows="6" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="font-light w-full p-2 bg-brown rounded-lg border-2 border-brown text-white hover:bg-textbrown">Publish
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+    </div>
+    <!-- Footer -->
+    <div class=" md:container md:mx-auto h-20 border-b-0 border-2 rounded-t-3xl mt-8 px-12 pt-3 bg-cover bg-center"
+        style="background-image: url('../assets/camille-brodard-16.jpg');">
+        <div
+            class="px-4 rounded-xl h-12 flex items-center justify-center backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100">
+            <div class="flex gap-4 md:gap-8 lg:gap-16">
+                <p>Created by <a href="https://github.com/ballpanuwat25"
+                        class="text-white underline font-bold">ballpanuwat25</a> 🌸 </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
