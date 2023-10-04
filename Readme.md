@@ -25,13 +25,13 @@ To run this website locally, follow these steps:
 
 1. Clone the repository:
 
-   `git clone https://github.com/yourusername/blog-platform-website.git` 
+   `git clone https://github.com/ballpanuwat25/Blog-Platform.git` 
 
 2.  Navigate to the project directory:
     
-    shellCopy code
+    Copy code
     
-    `cd blog-platform-website` 
+    `cd Blog-Platform` 
     
 3.  Open the `index.html` file in your web browser to start exploring the website.
     
@@ -61,10 +61,6 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 ## License
 
 This project is licensed under the MIT License.
-
-## Acknowledgments
-
--   Special thanks to the Tailwind CSS community for their contributions to web design and styling.
 
 ## Contact
 
